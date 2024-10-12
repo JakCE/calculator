@@ -2,14 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="iPhone Calculator">
+<Layout title="iOS Calculator">
 	<main class="flex flex-col justify-center items-center h-screen bg-black">
+		<div class="bg-orange-500 fixed bottom-0 left-0 z-50 p-0 w-full text-center font-bold">&#169; Jak Campos</div>
 		<div class="calculator w-[300px] bg-black rounded-3xl p-8">
 			<div class="display h-[100px] text-6xl text-white text-right p-5 box-border">0</div>
 			<div class="flex justify-center items-end h-[450px]">
 			<div class="buttons grid grid-cols-4 gap-[6px] justify-center items-center">
 				<div class="flex items-center justify-center">
-					<button class="bg-[#5C5B60] text-black">AC</button>
+					<button class="bg-[#5C5B60] text-black">C</button>
 				</div>
 				<div class="flex items-center justify-center">
 					<button class="bg-[#5C5B60] text-black">+/-</button>
@@ -110,7 +111,7 @@ import Layout from '../layouts/Layout.astro';
 					currentValue += value;
 				}
 				updateDisplay();
-			} else if (value === 'AC') {
+			} else if (value === 'C') {
 				clear();
 			} else if (value === '+/-') {
 				currentValue = (parseFloat(currentValue) * -1).toString();
